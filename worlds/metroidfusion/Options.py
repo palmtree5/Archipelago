@@ -105,6 +105,15 @@ class CombatDifficulty(Choice):
     option_expert = 2
     default = 0
 
+class DamageRunDifficulty(Choice):
+    """What level of damage run difficulty may be required to navigate around."""
+    display_name = "Damage Run Difficulty"
+    option_none = 0
+    option_beginner = 1
+    option_advanced = 2
+    option_expert = 3
+    default = 0
+
 # Minor Options
 
 class PaletteRandomization(Toggle):
@@ -189,6 +198,7 @@ class MetroidFusionOptions(PerGameCommonOptions):
     ShinesparkTrickDifficulty: ShinesparkTrickDifficulty
     WallJumpTrickDifficulty: WallJumpTrickDifficulty
     CombatDifficulty: CombatDifficulty
+    DamageRunDifficulty: DamageRunDifficulty
 
     PaletteRandomization: PaletteRandomization
     EnableHints: EnableHints
@@ -221,7 +231,8 @@ metroid_fusion_option_groups = [
     OptionGroup("Trick Options", [
         ShinesparkTrickDifficulty,
         WallJumpTrickDifficulty,
-        CombatDifficulty
+        CombatDifficulty,
+        DamageRunDifficulty
     ]),
     OptionGroup("Minor Options", [
         PaletteRandomization,
